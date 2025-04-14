@@ -1,36 +1,136 @@
 {
   "main": [
     {
-      "name": "Home",
-      "url": "/"
-    },
-    {
-      "name": "Products",
-      "url": "/products"
-    },
-    {
-      "name": "Pages",
+      "name": "Napkins & Towels",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "About",
-          "url": "/about"
+          "name": "Napkins",
+          "url": "/"
         },
         {
-          "name": "Contact",
-          "url": "/contact"
+          "name": "Towels",
+          "url": "/"
         },
         {
-          "name": "404 Page",
-          "url": "/404"
+          "name": "Tissue",
+          "url": "/"
         }
       ]
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Bags",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Kraft Paper Bags",
+          "url": "/"
+        },
+        {
+          "name": "Paper Bags",
+          "url": "/"
+        },
+        {
+          "name": "Rope Handle Bags",
+          "url": "/"
+        },
+        {
+          "name": "Non-Woven Bags",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "name": "Takeout Containers",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Aluminum Containers",
+          "url": "/"
+        },
+        {
+          "name": "Clamshell Containers",
+          "url": "/"
+        },
+        {
+          "name": "Deli Containers",
+          "url": "/"
+        },
+        {
+          "name": "Liners+Wraps",
+          "url": "/"
+        },
+        {
+          "name": "Paper Food Box",
+          "url": "/"
+        },
+        {
+          "name": "Plastic Containers w/ Lids",
+          "url": "/"
+        },
+        {
+          "name": "Poly Bags",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "name": "Cups & Lids",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Cold Beverages",
+          "url": "/"
+        },
+        {
+          "name": "Hot Beverages",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "name": "Essential",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Food Wraps & Foil Rolls",
+          "url": "/"
+        },
+        {
+          "name": "Plates & Cutlery",
+          "url": "/"
+        },
+        {
+          "name": "Straws+Sticks+Picks",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "name": "Janitorial",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Cleaning Supplies",
+          "url": "/"
+        },
+        {
+          "name": "Garbage Bags",
+          "url": "/"
+        },
+        {
+          "name": "Soaps & Detergents",
+          "url": "/"
+        }
+      ]
     }
+    
   ],
   "footer": [
     {

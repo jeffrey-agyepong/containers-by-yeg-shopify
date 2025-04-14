@@ -66,10 +66,34 @@ const isParentActive = (children: any[]) => {
             </ul>
           </li>
 
-          <li>
-            <a href="/products?c=bags" class="text-lg font-medium hover:text-primary transition-colors">
-             Bags
-            </a>
+          <li class="relative group">
+            <button class="text-lg font-medium hover:text-primary transition-colors">
+              <a href="/products?c=takeout-containers" class="text-lg font-medium hover:text-primary transition-colors">
+            Bags
+              </a>
+            </button>
+            <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white dark:bg-dark rounded shadow-md py-2 z-50 min-w-[10rem]">
+              <li>
+                <a href="/faq" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
+                  Kraft Paper Bags
+                </a>
+              </li>
+              <li>
+                <a href="/contact" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
+                  Paper Bags
+                </a>
+              </li>
+              <li>
+                <a href="/contact" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
+                  Rope Handle Bags
+                </a>
+              </li>
+              <li>
+                <a href="/contact" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
+                  Non-Woven Bags
+                </a>
+              </li>
+            </ul>
           </li>
 
           <li class="relative group">
@@ -81,12 +105,37 @@ const isParentActive = (children: any[]) => {
             <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white dark:bg-dark rounded shadow-md py-2 z-50 min-w-[10rem]">
               <li>
                 <a href="/faq" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
-                  FAQ
+                  Aluminum Containers
                 </a>
               </li>
               <li>
                 <a href="/contact" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
-                  Contact
+                  Clamshell Containers
+                </a>
+              </li>
+              <li>
+                <a href="/faq" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
+                  Deli Containers
+                </a>
+              </li>
+              <li>
+                <a href="/contact" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
+                  Liners+Wraps
+                </a>
+              </li>
+              <li>
+                <a href="/faq" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
+                  Paper Food Box
+                </a>
+              </li>
+              <li>
+                <a href="/contact" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
+                  Plastic Containers w/ Lids
+                </a>
+              </li>
+              <li>
+                <a href="/faq" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
+                  Poly Bags
                 </a>
               </li>
             </ul>
@@ -100,12 +149,12 @@ const isParentActive = (children: any[]) => {
             <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white dark:bg-dark rounded shadow-md py-2 z-50 min-w-[10rem]">
               <li>
                 <a href="/faq" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
-                  FAQ
+                 Cold Beverages
                 </a>
               </li>
               <li>
                 <a href="/contact" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
-                  Contact
+                 Hot Beverages
                 </a>
               </li>
             </ul>
@@ -119,12 +168,17 @@ const isParentActive = (children: any[]) => {
             <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white dark:bg-dark rounded shadow-md py-2 z-50 min-w-[10rem]">
               <li>
                 <a href="/faq" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
-                  FAQ
+                  Food Wraps & Foil Rolls
                 </a>
               </li>
               <li>
                 <a href="/contact" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
-                  Contact
+                  Plates & Cutlery
+                </a>
+              </li>
+              <li>
+                <a href="/contact" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
+                  Straws+Sticks+Picks
                 </a>
               </li>
             </ul>
@@ -138,12 +192,17 @@ const isParentActive = (children: any[]) => {
             <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white dark:bg-dark rounded shadow-md py-2 z-50 min-w-[10rem]">
               <li>
                 <a href="/faq" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
-                  FAQ
+                  Cleaning Supplies
                 </a>
               </li>
               <li>
                 <a href="/contact" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
-                  Contact
+                  Garbage Bags
+                </a>
+              </li>
+              <li>
+                <a href="/contact" class="block px-4 py-2 text-lg hover:bg-gray-100 dark:hover:bg-darkmode-body transition-colors">
+                  Soaps & Detergents
                 </a>
               </li>
             </ul>
@@ -339,3 +398,11 @@ const isParentActive = (children: any[]) => {
   // Initialize when the document is loaded
   document.addEventListener("astro:page-load", initializeHeader);
 </script>
+
+<style>
+header a, header button{
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+
+}
+</style>
