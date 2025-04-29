@@ -29,8 +29,8 @@ const isParentActive = (children: any[]) => {
 
 <header id="cs-navigation">
   <!--Nav Logo-->
-  <a href="" class="cs-logo" aria-label="back to home">
-      <h1 class="text-xl text-white">
+  <a href="/" class="cs-logo" aria-label="back to home">
+      <h1 class="text-xl text-black">
         Containers By Yeg
       </h1>
   </a>
@@ -317,8 +317,8 @@ html {
         opacity: 1;
     }
     #cs-navigation .cs-logo {
-        width: 40%;
-        max-width: 12.125rem;
+        width: 100%;
+        max-width: 30rem;
         height: 100%;
         padding: 0.75rem 1rem;
         /* prevents padding and border from affecting height and width */
@@ -326,7 +326,7 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        /* position: absolute; */
         top: 0;
         left: 0;
         z-index: 10;
@@ -728,7 +728,7 @@ html {
         display: none;
     }
     #cs-navigation .cs-logo {
-        width: 18.4%;
+        width: 100%;
         max-width: 20rem;
         height: 100%;
         /* 32px - 64px */
