@@ -60,11 +60,11 @@ const NavUser = ({ pathname }: { pathname: string }) => {
             </div>
             <div className="leading-none max-md:hidden">
               <div className="flex items-center">
-                <p className="block text-text-dark dark:text-darkmode-text-dark text-base truncate">
+                <p className="block text-text-dark dark:text-black text-base truncate">
                   {user?.firstName}
                 </p>
                 <svg
-                  className={`w-5 text-text-dark dark:text-darkmode-text-dark dark:hover:text-darkmode-text-primary`}
+                  className={`w-5 text-text-dark dark:text-black dark:hover:text-darkmode-text-primary`}
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   aria-hidden="true"
