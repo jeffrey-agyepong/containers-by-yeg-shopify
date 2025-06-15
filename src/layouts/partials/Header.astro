@@ -62,13 +62,13 @@ const isParentActive = (children: any[]) => {
         </a>
           <ul class="cs-drop-ul">
             <li class="cs-drop-li">
-              <a href="" class="cs-li-link cs-drop-link">Napkins</a>
+              <a href="/products?c=napkins" class="cs-li-link cs-drop-link">Napkins</a>
             </li>
             <li class="cs-drop-li">
-              <a href="" class="cs-li-link cs-drop-link">Towels</a>
+              <a href="/products?c=towels" class="cs-li-link cs-drop-link">Towels</a>
             </li>
             <li class="cs-drop-li">
-              <a href="" class="cs-li-link cs-drop-link">Tissue</a>
+              <a href="/products?c=tissue" class="cs-li-link cs-drop-link">Tissue</a>
             </li>
           </ul>
         </li>
@@ -89,15 +89,15 @@ const isParentActive = (children: any[]) => {
         </a>
           <ul class="cs-drop-ul">
             <li class="cs-drop-li">
-              <a href="" class="cs-li-link cs-drop-link">
+              <a href="/products?c=rope-handle-bags" class="cs-li-link cs-drop-link">
                 Rope Handle Paper Bags
               </a>
             </li>
             <li class="cs-drop-li">
-              <a href="" class="cs-li-link cs-drop-link">Paper Bags</a>
+              <a href="/products?c=paper-bags" class="cs-li-link cs-drop-link">Paper Bags</a>
             </li>
             <li class="cs-drop-li">
-              <a href="" class="cs-li-link cs-drop-link">Non-Woven Bags</a>
+              <a href="/products?c=non-woven-bags" class="cs-li-link cs-drop-link">Non-Woven Bags</a>
             </li>
           </ul>
         </li>
@@ -122,7 +122,7 @@ const isParentActive = (children: any[]) => {
               <a href="" class="cs-li-link cs-drop-link"> Liners & Wraps </a>
             </li>
             <li class="cs-drop-li">
-              <a href="" class="cs-li-link cs-drop-link"> Deli-Containers </a>
+              <a href="/products?c=deli-containers" class="cs-li-link cs-drop-link"> Deli-Containers </a>
             </li>
             <li class="cs-drop-li">
               <a href="" class="cs-li-link cs-drop-link">
@@ -875,6 +875,7 @@ const isParentActive = (children: any[]) => {
   }
 </style>
 <script>
+  document.addEventListener("DOMContentLoaded", () => {
   // add classes for mobile navigation toggling
   var CSbody = document.querySelector("body");
   const CSnavbarMenu = document.querySelector("#cs-navigation");
@@ -910,4 +911,5 @@ const isParentActive = (children: any[]) => {
     };
     item.addEventListener("click", onClick);
   }
+  });
 </script>
