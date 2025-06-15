@@ -911,5 +911,12 @@ const isParentActive = (children: any[]) => {
     };
     item.addEventListener("click", onClick);
   }
+
+  // Reset classes on browser back/forward or reload
+    window.addEventListener("pageshow", () => {
+      CSbody.classList.remove("cs-open");
+      CSnavbarMenu.classList.remove("cs-active");
+      CShamburgerMenu.classList.remove("cs-active");
+    });
   });
 </script>
