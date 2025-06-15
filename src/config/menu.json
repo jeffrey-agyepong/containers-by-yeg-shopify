@@ -21,74 +21,74 @@
     },
     {
       "name": "Bags",
-      "url": "",
+      "url": "/products?c=bags",
       "hasChildren": true,
       "children": [
         {
           "name": "Kraft Paper Bags",
-          "url": "/"
+          "url": "/products?c=kraft-paper-bags"
         },
         {
           "name": "Paper Bags",
-          "url": "/"
+          "url": "/products?c=paper-bags"
         },
         {
           "name": "Rope Handle Bags",
-          "url": "/"
+          "url": "/products?c=rope-handle-bags"
         },
         {
           "name": "Non-Woven Bags",
-          "url": "/"
+          "url": "/products?c=non-woven-bags"
         }
       ]
     },
     {
       "name": "Takeout Containers",
-      "url": "",
+      "url": "/products?c=takeout-containers",
       "hasChildren": true,
       "children": [
         {
           "name": "Aluminum Containers",
-          "url": "/"
+          "url": "/products?c=aluminum-containers"
         },
         {
           "name": "Clamshell Containers",
-          "url": "/"
+          "url": "/products?c=clamshell-containers"
         },
         {
           "name": "Deli Containers",
-          "url": "/"
+          "url": "/products?c=deli-containers"
         },
         {
           "name": "Liners+Wraps",
-          "url": "/"
+          "url": "/products?c=liners-wraps"
         },
         {
           "name": "Paper Food Box",
-          "url": "/"
+          "url": "/products?c=paper-food-box"
         },
         {
           "name": "Plastic Containers w/ Lids",
-          "url": "/"
+          "url": "/products?c=plastic-containers-w-lids"
         },
         {
           "name": "Poly Bags",
-          "url": "/"
+          "url": "/products?c=poly-bags"
         }
       ]
     },
     {
       "name": "Cups & Lids",
-      "url": "",
+      "url": "/products?c=cups-lids",
       "hasChildren": true,
       "children": [
         {
           "name": "Cold Beverages",
-          "url": "/"
+          "url": "/products?c=cold-beverages"
         },
         {
           "name": "Hot Beverages",
-          "url": "/"
+          "url": "/products?c=hot-beverages"
         }
       ]
     },
@@ -99,15 +99,15 @@
       "children": [
         {
           "name": "Food Wraps & Foil Rolls",
-          "url": "/"
+          "url": "/products?c=food-wraps-foil-rolls"
         },
         {
           "name": "Plates & Cutlery",
-          "url": "/"
+          "url": "/products?c=plates-cutlery"
         },
         {
           "name": "Straws+Sticks+Picks",
-          "url": "/"
+          "url": "/products?c=strws-sticks-picks"
         }
       ]
     },
@@ -118,15 +118,15 @@
       "children": [
         {
           "name": "Cleaning Supplies",
-          "url": "/"
+          "url": "/products?c=cleaning-supplies"
         },
         {
           "name": "Garbage Bags",
-          "url": "/"
+          "url": "/products?c=garbage-bags"
         },
         {
           "name": "Soaps & Detergents",
-          "url": "/"
+          "url": "/products?c=soaps-detergents"
         }
       ]
     }
