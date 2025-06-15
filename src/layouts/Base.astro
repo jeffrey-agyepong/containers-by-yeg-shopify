@@ -172,7 +172,7 @@ const { title, meta_title, description, image, noindex, canonical } =
   </head>
   <body>
     <!-- <TwSizeIndicator /> -->
-    <Header />
+    <Header key={Astro.url.pathname}/>
     <main id="main-content">
       <slot />
     </main>
