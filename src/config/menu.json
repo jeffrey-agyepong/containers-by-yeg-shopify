@@ -60,7 +60,7 @@
           "url": "/products?c=deli-containers"
         },
         {
-          "name": "Liners+Wraps",
+          "name": "Liners & Wraps",
           "url": "/products?c=liners-wraps"
         },
         {
@@ -94,7 +94,6 @@
     },
     {
       "name": "Essential",
-      "url": "",
       "hasChildren": true,
       "children": [
         {
@@ -106,14 +105,13 @@
           "url": "/products?c=plates-cutlery"
         },
         {
-          "name": "Straws+Sticks+Picks",
-          "url": "/products?c=strws-sticks-picks"
+          "name": "Straws, Sticks & Picks",
+          "url": "/products?c=straws-sticks-picks"
         }
       ]
     },
     {
       "name": "Janitorial",
-      "url": "",
       "hasChildren": true,
       "children": [
         {
@@ -130,7 +128,6 @@
         }
       ]
     }
-    
   ],
   "footer": [
     {
