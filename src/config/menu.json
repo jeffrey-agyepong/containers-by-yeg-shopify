@@ -2,20 +2,20 @@
   "main": [
     {
       "name": "Napkins & Towels",
-      "url": "",
+      "url": "/products?c=napkins-towels",
       "hasChildren": true,
       "children": [
         {
           "name": "Napkins",
-          "url": "/"
+          "url": "/products?c=napkins"
         },
         {
           "name": "Towels",
-          "url": "/"
+          "url": "/products?c=towels"
         },
         {
           "name": "Tissue",
-          "url": "/"
+          "url": "/products?c=tissue"
         }
       ]
     },
