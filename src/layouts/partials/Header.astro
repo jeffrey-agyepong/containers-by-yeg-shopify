@@ -874,49 +874,50 @@ const isParentActive = (children: any[]) => {
     }
   }
 </style>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  // add classes for mobile navigation toggling
-  var CSbody = document.querySelector("body");
-  const CSnavbarMenu = document.querySelector("#cs-navigation");
-  const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
+<script is:inline>
+  function initMobileNav() {
+    const CSbody = document.querySelector("body");
+    const CSnavbarMenu = document.querySelector("#cs-navigation");
+    const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
 
-  CShamburgerMenu.addEventListener("click", function () {
-    CShamburgerMenu.classList.toggle("cs-active");
-    CSnavbarMenu.classList.toggle("cs-active");
-    CSbody.classList.toggle("cs-open");
-    // run the function to check the aria-expanded value
-    ariaExpanded();
-  });
+    if (!CSnavbarMenu || !CShamburgerMenu) return;
 
-  // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not
-  function ariaExpanded() {
-    const csUL = document.querySelector("#cs-expanded");
-    const csExpanded = csUL.getAttribute("aria-expanded");
+    // Prevent multiple event bindings
+    CShamburgerMenu.removeEventListener("click", toggleNav);
+    CShamburgerMenu.addEventListener("click", toggleNav);
 
-    if (csExpanded === "false") {
-      csUL.setAttribute("aria-expanded", "true");
-    } else {
-      csUL.setAttribute("aria-expanded", "false");
+    function toggleNav() {
+      CShamburgerMenu.classList.toggle("cs-active");
+      CSnavbarMenu.classList.toggle("cs-active");
+      CSbody.classList.toggle("cs-open");
+      toggleAriaExpanded();
+    }
+
+    function toggleAriaExpanded() {
+      const csUL = document.querySelector("#cs-expanded");
+      if (!csUL) return;
+      const expanded = csUL.getAttribute("aria-expanded") === "true";
+      csUL.setAttribute("aria-expanded", (!expanded).toString());
+    }
+
+    // Dropdowns
+    const dropDowns = document.querySelectorAll("#cs-navigation .cs-dropdown");
+
+    dropDowns.forEach((item) => {
+      item.removeEventListener("click", toggleDropdown);
+      item.addEventListener("click", toggleDropdown);
+    });
+
+    function toggleDropdown(e) {
+      // Prevent triggering on anchor clicks
+      if (e.target.closest("a")) return;
+      this.classList.toggle("cs-active");
     }
   }
 
-  // mobile nav dropdown code
-  const dropDowns = Array.from(
-    document.querySelectorAll("#cs-navigation .cs-dropdown")
-  );
-  for (const item of dropDowns) {
-    const onClick = () => {
-      item.classList.toggle("cs-active");
-    };
-    item.addEventListener("click", onClick);
-  }
+  // Run on first load
+  document.addEventListener("DOMContentLoaded", initMobileNav);
 
-  // Reset classes on browser back/forward or reload
-    window.addEventListener("pageshow", () => {
-      CSbody.classList.remove("cs-open");
-      CSnavbarMenu.classList.remove("cs-active");
-      CShamburgerMenu.classList.remove("cs-active");
-    });
-  });
+  // Re-run after client-side routing (Astro specific)
+  window.addEventListener("astro:after-swap", initMobileNav);
 </script>
