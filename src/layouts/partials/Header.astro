@@ -63,7 +63,7 @@ const isParentActive = (children: any[]) => {
         </div>
 
         <div
-          class="fixed top-0 left-0 h-full bg-white dark:bg-darkmode-body overflow-y-auto w-full md:w-96 p-9 sidebar transform -translate-x-full transition-transform"
+          class="fixed top-0 left-0 h-full bg-white overflow-y-auto w-full md:w-96 p-9 sidebar transform -translate-x-full transition-transform"
         >
           <div class="flex justify-between items-center mb-14">
             <Logo />
@@ -171,7 +171,9 @@ const isParentActive = (children: any[]) => {
 
     <div class="order-2 lg:order-3 ml-auto flex items-center lg:ml-0">
       <ThemeSwitcher className="mr-4 md:mr-6" />
-      <Cart />
+      <div class="nav-cart-wrapper">
+        <Cart />
+      </div>
 
       {
         settings.account && (
@@ -207,7 +209,7 @@ const isParentActive = (children: any[]) => {
         >
         </div>
         <div
-          class="fixed top-0 left-0 h-full bg-white dark:bg-darkmode-body overflow-y-auto w-full md:w-96 p-9 sidebar-mobile transform -translate-x-full transition-transform"
+          class="fixed top-0 left-0 h-full bg-white overflow-y-auto w-full md:w-96 p-9 sidebar-mobile transform -translate-x-full transition-transform"
         >
           {/* Same navigation list as desktop but for mobile */}
           <div class="flex justify-between items-center mb-14">

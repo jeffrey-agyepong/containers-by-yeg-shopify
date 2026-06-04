@@ -108,13 +108,34 @@
   }
 }
 
-/* mobile nav icons — white when header is transparent over hero */
+/* sidebar panels always solid white */
+.sidebar,
+.sidebar-mobile {
+  background-color: #fff !important;
+}
+
+/* mobile nav icons + cart — white when header is transparent over hero */
 .nav-mobile-icon {
   @apply text-white border-white/40;
 }
 
 .header-scrolled .nav-mobile-icon {
   @apply text-text-dark border-border;
+}
+
+/* cart icon inherits color from this wrapper */
+.nav-cart-wrapper {
+  color: #fff;
+}
+
+.header-scrolled .nav-cart-wrapper {
+  color: #000;
+}
+
+@media (min-width: 1024px) {
+  .nav-cart-wrapper {
+    color: #000;
+  }
 }
 
 /* footer items */
