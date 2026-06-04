@@ -1,0 +1,143 @@
+<!-- ============================================ -->
+<!--                About FAQ                     -->
+<!-- ============================================ -->
+
+---
+import Accordion from "@/functional-components/Accordion";
+import { markdownify } from "@/lib/utils/textConverter";
+
+interface Props {
+  title: string;
+  subtitle: string;
+  faqs: Array<{ title: string; content: string }>;
+  buttonEnable?: boolean;
+  buttonLabel?: string;
+  buttonLink?: string;
+}
+
+const { title, subtitle, faqs, buttonEnable, buttonLabel, buttonLink } = Astro.props;
+---
+
+<section id="about-faq">
+    <div class="cs-container">
+        <div class="cs-left">
+            <span class="cs-topper">Got Questions?</span>
+            <h2 class="cs-title" set:html={markdownify(title)} />
+            <p class="cs-text" set:html={markdownify(subtitle)} />
+            {buttonEnable && (
+                <a href={buttonLink} class="cs-button-solid">{buttonLabel}</a>
+            )}
+        </div>
+        <div class="cs-right">
+            <div class="cs-accordion-wrapper">
+                <Accordion client:load faqs={faqs} />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/*-- -------------------------- -->
+<---          About FAQ         -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+    #about-faq {
+        padding: var(--sectionPadding);
+    }
+    #about-faq .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #about-faq .cs-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #about-faq .cs-topper {
+        color: var(--secondary);
+    }
+    #about-faq .cs-title {
+        margin: 0 0 1rem;
+    }
+    #about-faq .cs-text {
+        font-size: clamp(1rem, 1.5vw, 1.125rem);
+        line-height: 1.6em;
+        color: var(--bodyTextColor);
+        margin-bottom: 2rem;
+    }
+    #about-faq .cs-button-solid {
+        font-size: 1rem;
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        box-sizing: border-box;
+    }
+    #about-faq .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 0.25;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.25rem;
+        transition: width 0.3s;
+    }
+    #about-faq .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #about-faq .cs-accordion-wrapper {
+        background-color: #f7f8fa;
+        border: 1px solid #e8e8e8;
+        border-radius: 0.625rem;
+        padding: clamp(1.5rem, 4vw, 2.5rem);
+    }
+}
+@media only screen and (min-width: 64rem) {
+    #about-faq .cs-container {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: clamp(3rem, 8vw, 6rem);
+    }
+    #about-faq .cs-left {
+        width: 40%;
+        flex: none;
+        position: sticky;
+        top: 6rem;
+    }
+    #about-faq .cs-right {
+        flex: 1;
+    }
+}
+</style>
+
+<style is:global>
+/* Dark Mode — About FAQ */
+.dark #about-faq .cs-text {
+    color: #DDD;
+}
+.dark #about-faq .cs-title {
+    color: #fff;
+}
+.dark #about-faq .cs-accordion-wrapper {
+    background-color: #2a2a2a;
+    border-color: #3E3E3E;
+}
+</style>

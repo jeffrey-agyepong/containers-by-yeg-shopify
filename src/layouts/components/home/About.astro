@@ -5,32 +5,31 @@
 <section id="sbs-418">
     <div class="cs-container">
         <div class="cs-content">
-            <span class="cs-topper">Features</span>
-            <h2 class="cs-title">Professional Landscaping Services</h2>
+            <span class="cs-topper">About Us</span>
+            <h2 class="cs-title dark:text-white">Edmonton's Import Specialist for Restaurant Disposables</h2>
             <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Since 2006, Containers By Yeg (World Class Imports) has been supplying Edmonton's foodservice industry with premium disposable packaging, containers, and cleaning products.
+            </p>
+            <p class="cs-text">
+                We work directly with manufacturers to bring you high-quality products at wholesale prices — from takeout containers and pizza boxes to napkins, bags, cups, and more. Whether you run a restaurant, food truck, or catering business, we have the supplies you need in the quantities that make sense.
             </p>
             <div class="cs-button-group">
-                <a href="" class="cs-button-solid">Learn More</a>
-                <a href="" class="cs-button-transparent">Get In Touch</a>
+                <a href="/about" class="cs-button-solid">Learn More</a>
+                <a href="/contact" class="cs-button-transparent">Get In Touch</a>
             </div>
         </div>
         <div class="cs-image-group">
             <picture class="cs-picture">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/yard-m.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/yard.jpg">
-                <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/yard.jpg" alt="yard" width="558" height="496">
+                <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/boxhuwbys/wci2006-hero-image.webp?updatedAt=1740599916822">
+                <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/boxhuwbys/wci2006-hero-image.webp?updatedAt=1740599916822">
+                <img aria-hidden="true" loading="lazy" decoding="async" src="https://ik.imagekit.io/boxhuwbys/wci2006-hero-image.webp?updatedAt=1740599916822" alt="Containers By Yeg warehouse" width="558" height="496">
             </picture>
-            <!--Info Box-->
             <div class="cs-info">
-                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/tree.svg" alt="icon" width="48" height="48">
                 <div class="cs-flex">
-                    <span class="cs-header">Full Remodel</span>
-                    <span class="cs-desc">Sod, plants, driveway, hedges</span>
+                    <span class="cs-header">20+ Years</span>
+                    <span class="cs-desc">Serving Edmonton since 2006</span>
                 </div>
             </div>
-            <!--Svg Green Trapezpid-->
-            <img class="cs-trapezoid" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/trapezoid.svg" alt="yard" width="558" height="496">
         </div>
     </div>
 </section>
@@ -66,7 +65,9 @@
         /* centers content horizontally, set to flex-start to left align */
         align-items: flex-start;
     }
-
+    #sbs-418 .cs-topper {
+        color: var(--secondary);
+    }
     #sbs-418 .cs-text {
         margin-bottom: 1rem;
     }
@@ -95,7 +96,6 @@
         display: inline-block;
         position: relative;
         z-index: 1;
-        /* prevents padding from adding to the width */
         box-sizing: border-box;
     }
     #sbs-418 .cs-button-solid:before {
@@ -116,7 +116,6 @@
     }
     #sbs-418 .cs-button-transparent {
         font-size: 1rem;
-        /* 46px - 56px */
         line-height: clamp(2.875rem, 5.5vw, 3.5rem);
         text-decoration: none;
         font-weight: 700;
@@ -127,43 +126,21 @@
         padding: 0 1.5rem;
         background-color: transparent;
         border-radius: 0.25rem;
+        border: 2px solid var(--primary);
         display: inline-block;
         position: relative;
         z-index: 1;
-        /* prevents padding from adding to the width */
         box-sizing: border-box;
-        transition:
-            color 0.3s,
-            border-color 0.3s,
-            background-color 0.3s;
-    }
-    #sbs-418 .cs-button-transparent:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background: #000;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        border-radius: 0.25rem;
-        transition: width 0.3s;
+        transition: color 0.3s, border-color 0.3s, background-color 0.3s;
     }
     #sbs-418 .cs-button-transparent:hover {
         color: #fff;
-        border-color: #000;
-        background-color: #000;
-    }
-    #sbs-418 .cs-button-transparent:hover:before {
-        width: 100%;
+        background-color: var(--primary);
     }
     #sbs-418 .cs-image-group {
         width: 100%;
-        /* changes to 650px at desktop */
         max-width: 34.375rem;
         height: auto;
-        /* removed at desktop */
         padding-top: 1.875rem;
         display: flex;
         justify-content: center;
@@ -174,52 +151,39 @@
     }
     #sbs-418 .cs-info {
         /* 12px - 20px */
-        padding: clamp(0.75rem, 1.5vw, 1.25rem);
-        /*260px - 360px */
-        min-width: clamp(16.25rem, 30vw, 22.5rem);
-        background-color: #fff;
-        border: 1px solid #b4b2c7;
-        border-radius: 0.75rem;
+        padding: clamp(0.75rem, 1.5vw, 1.25rem) clamp(1rem, 2vw, 1.5rem);
+        min-width: clamp(14rem, 30vw, 20rem);
+        background-color: var(--primary);
+        border-radius: 0.5rem;
         box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.4);
         box-sizing: border-box;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         position: absolute;
-        /* next two properties centers it horizontally */
         left: 50%;
         transform: translateX(-50%);
         bottom: 1.25rem;
     }
-    #sbs-418 .cs-icon {
-        /* 32px - 48px */
-        width: clamp(2rem, 4vw, 3rem);
-        height: auto;
-        margin-right: 0.75rem;
-    }
     #sbs-418 .cs-header {
-        /* 16px - 20px */
-        font-size: clamp(1rem, 1.5vw, 1.25rem);
+        font-size: clamp(1.25rem, 2vw, 1.5rem);
         font-weight: 700;
         line-height: 1.2em;
         margin-bottom: 0.25rem;
-        color: var(--headerColor);
+        color: #fff;
         display: block;
     }
     #sbs-418 .cs-desc {
-        /* 14px - 16px */
         font-size: clamp(0.875rem, 1.5vw, 1rem);
         line-height: 1.2em;
-        color: var(--bodyTextColor);
+        color: rgba(255,255,255,0.85);
     }
     #sbs-418 .cs-picture {
         width: 85%;
         max-width: 34.875rem;
         margin-bottom: 2.5rem;
         border-radius: 0.75rem;
-        /* removed at tablet */
         aspect-ratio: 1.01115242;
-        /* clips img corners */
         overflow: hidden;
         display: block;
         position: relative;
@@ -230,16 +194,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        /* makes it act like a background image */
         object-fit: cover;
-    }
-    #sbs-418 .cs-trapezoid {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
     }
 }
 /* Tablet - 768px */
@@ -252,14 +207,12 @@
     }
     #sbs-418 .cs-content {
         width: 50%;
-        /* prevents flexbox from squishing it */
         flex: none;
     }
     #sbs-418 .cs-image-group {
         max-width: 41.1875rem;
     }
     #sbs-418 .cs-picture {
-        /* 269px - 496px changes at desktop */
         height: clamp(16.8125rem, 35vw, 31rem);
         aspect-ratio: none;
     }
@@ -274,7 +227,6 @@
         padding: 0;
     }
     #sbs-418 .cs-picture {
-        /* 421px - 496px changes at desktop */
         height: clamp(26.3125rem, 40vw, 31rem);
     }
     #sbs-418 .cs-info {
@@ -282,9 +234,5 @@
         right: 1.125rem;
         transform: none;
     }
-    #sbs-418 .cs-trapezoid {
-        height: 80%;
-        bottom: 0;
-    }
-}                                  
-</style>                                
+}
+</style>

@@ -1,53 +1,288 @@
 ---
-
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import { markdownify } from "@/lib/utils/textConverter";
 const { copyright } = config.params;
+const { logo_darkmode, title } = config.site;
 
-export interface ISocial {
-  name: string;
-  icon: string;
-  link: string;
-}
+const categories = menu.main.map((item) => ({
+  name: item.name,
+  url: item.url ?? "/products",
+}));
+
+const quickLinks = [
+  { name: "Home", url: "/" },
+  { name: "About Us", url: "/about" },
+  { name: "All Products", url: "/products" },
+  { name: "Contact", url: "/contact" },
+];
 ---
 
-<footer class="bg-light dark:bg-darkmode-light">
+<footer class="cs-footer">
   <div class="container">
-    <div
-      class="flex flex-col md:flex-row justify-between items-center py-10 md:pt-20 md:pb-14"
-    >
-      <!-- <Logo /> -->
 
-      <ul class="flex gap-x-4 lg:gap-x-10 my-3">
+    <!-- Main footer grid -->
+    <div class="cs-footer-grid">
+
+      <!-- Brand column -->
+      <div class="cs-brand-col">
+        <a href="/" class="cs-footer-logo">
+          <img
+            src={logo_darkmode}
+            alt={title}
+            width="150"
+            height="33"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+        <p class="cs-brand-text">
+          Edmonton's trusted supplier of restaurant disposables since 2006. We
+          carry everything from takeout containers and cups to napkins, bags,
+          and cleaning supplies — at wholesale pricing for foodservice businesses.
+        </p>
+        <ul class="cs-contact-list">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Edmonton, Alberta
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="/contact">info@containersbyyeg.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Categories column -->
+      <div class="cs-footer-col">
+        <h3 class="cs-footer-heading">Categories</h3>
+        <ul class="cs-footer-links">
+          {categories.map((cat) => (
+            <li>
+              <a href={cat.url}>{cat.name}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Quick links column -->
+      <div class="cs-footer-col">
+        <h3 class="cs-footer-heading">Quick Links</h3>
+        <ul class="cs-footer-links">
+          {quickLinks.map((link) => (
+            <li>
+              <a href={link.url}>{link.name}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="cs-footer-bottom">
+      <ul class="cs-bottom-links">
         {
-          menu.footer.map((menu) => (
-            <li class="footer-link">
-              <a href={menu.url}>{menu.name}</a>
+          menu.footerCopyright.map((item) => (
+            <li>
+              <a href={item.url}>{item.name}</a>
             </li>
           ))
         }
       </ul>
-
-      
+      <p class="cs-copyright" set:html={markdownify(copyright)} />
+      <p class="cs-credit">Designed by <a href="/">J.A Web Design</a></p>
     </div>
 
-    <div class="border-t border-border py-5 dark:border-darkmode-border">
-      <div
-        class="flex flex-col md:flex-row gap-y-2 justify-between items-center text-text-light dark:text-darkmode-text-light"
-      >
-        <ul class="flex gap-x-4">
-          {
-            menu.footerCopyright.map((menu) => (
-              <li class="footer-link">
-                <a href={menu.url}>{menu.name}</a>
-              </li>
-            ))
-          }
-        </ul>
-
-        <p class="text-sm font-light" set:html={markdownify(copyright)} />
-      </div>
-    </div>
   </div>
 </footer>
+
+<style>
+.cs-footer {
+  background-color: #001f3f;
+  padding-top: clamp(3.75rem, 7vw, 5rem);
+}
+
+.cs-footer .container {
+  max-width: 80rem;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.cs-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 3rem);
+  padding-bottom: clamp(3rem, 6vw, 4rem);
+}
+
+@media (min-width: 48rem) {
+  .cs-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cs-brand-col {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 64rem) {
+  .cs-footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  .cs-brand-col {
+    grid-column: span 1;
+  }
+}
+
+/* Brand column */
+.cs-footer-logo {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+.cs-brand-text {
+  font-size: 0.9375rem;
+  line-height: 1.7em;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 1.5rem;
+  max-width: 28rem;
+}
+
+.cs-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cs-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cs-contact-list svg {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.cs-contact-list a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.cs-contact-list a:hover {
+  color: var(--secondary);
+}
+
+/* Nav columns */
+.cs-footer-heading {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin: 0 0 1.25rem;
+}
+
+.cs-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cs-footer-links a {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.cs-footer-links a::before {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: var(--secondary);
+  transition: width 0.2s;
+  display: inline-block;
+}
+
+.cs-footer-links a:hover {
+  color: #fff;
+}
+
+.cs-footer-links a:hover::before {
+  width: 0.75rem;
+}
+
+/* Bottom bar */
+.cs-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.25rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem 2rem;
+  text-align: center;
+}
+
+.cs-bottom-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.cs-bottom-links a {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.cs-bottom-links a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cs-copyright {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+}
+
+.cs-credit {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0;
+}
+
+.cs-credit a {
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.cs-credit a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (min-width: 48rem) {
+  .cs-footer-bottom {
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+</style>

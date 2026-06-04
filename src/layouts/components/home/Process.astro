@@ -1,0 +1,182 @@
+<!-- ============================================ -->
+<!--                  Process                     -->
+<!-- ============================================ -->
+
+<section id="process-1">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">How It Works</span>
+            <h2 class="cs-title dark:text-white">Ordering is Simple</h2>
+            <p class="cs-text">
+                Getting the supplies your restaurant needs has never been easier. Follow these three steps to place your order and get stocked up fast.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-step-number">1</div>
+                <div class="cs-connector" aria-hidden="true"></div>
+                <div class="cs-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                </div>
+                <h3 class="cs-h3 dark:text-white">Browse Products</h3>
+                <p class="cs-item-text">Explore our full catalogue of restaurant disposables — containers, cups, bags, napkins, and more — all organized by category.</p>
+            </li>
+            <li class="cs-item">
+                <div class="cs-step-number">2</div>
+                <div class="cs-connector" aria-hidden="true"></div>
+                <div class="cs-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36" aria-hidden="true">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <path d="M16 10a4 4 0 0 1-8 0"/>
+                    </svg>
+                </div>
+                <h3 class="cs-h3 dark:text-white">Place Your Order</h3>
+                <p class="cs-item-text">Add items to your cart and check out online, or contact us directly to discuss bulk orders and custom pricing for your business.</p>
+            </li>
+            <li class="cs-item">
+                <div class="cs-step-number">3</div>
+                <div class="cs-connector cs-last" aria-hidden="true"></div>
+                <div class="cs-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="36" height="36" aria-hidden="true">
+                        <rect x="1" y="3" width="15" height="13"/>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                        <circle cx="5.5" cy="18.5" r="2.5"/>
+                        <circle cx="18.5" cy="18.5" r="2.5"/>
+                    </svg>
+                </div>
+                <h3 class="cs-h3 dark:text-white">Fast Fulfillment</h3>
+                <p class="cs-item-text">Pick up from our Edmonton location or arrange delivery. We get your order ready quickly so your kitchen never runs short.</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<style>
+/*-- -------------------------- -->
+<---           Process          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #process-1 {
+        padding: var(--sectionPadding);
+    }
+    #process-1 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #process-1 .cs-content {
+        text-align: center;
+        width: 100%;
+        max-width: 48rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #process-1 .cs-topper {
+        color: var(--secondary);
+    }
+    #process-1 .cs-title {
+        margin: 0 0 1rem;
+    }
+    #process-1 .cs-text {
+        font-size: clamp(1rem, 1.5vw, 1.125rem);
+        line-height: 1.6em;
+        color: var(--bodyTextColor);
+        margin: 0;
+    }
+    #process-1 .cs-card-group {
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: clamp(2rem, 4vw, 2.5rem);
+    }
+    #process-1 .cs-item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    #process-1 .cs-step-number {
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: var(--primary);
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid var(--primary);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    #process-1 .cs-connector {
+        display: none;
+    }
+    #process-1 .cs-icon-wrapper {
+        width: 5rem;
+        height: 5rem;
+        background-color: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        color: #fff;
+    }
+    #process-1 .cs-h3 {
+        font-size: clamp(1.125rem, 2vw, 1.375rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0 0 0.75rem;
+        color: var(--headerColor);
+    }
+    #process-1 .cs-item-text {
+        font-size: 1rem;
+        line-height: 1.6em;
+        color: var(--bodyTextColor);
+        max-width: 22rem;
+        margin: 0 auto;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #process-1 .cs-card-group {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+        position: relative;
+    }
+    #process-1 .cs-item {
+        padding-top: 1.5rem;
+    }
+    #process-1 .cs-connector {
+        display: block;
+        width: calc(100% - 5rem);
+        height: 2px;
+        background: linear-gradient(to right, var(--primary), #ccc);
+        position: absolute;
+        top: 4rem;
+        left: calc(50% + 2.5rem);
+    }
+    #process-1 .cs-connector.cs-last {
+        display: none;
+    }
+    #process-1 .cs-item-text {
+        max-width: none;
+    }
+}
+</style>

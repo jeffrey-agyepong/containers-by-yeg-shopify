@@ -1,13 +1,12 @@
 ---
-import ImageMod from "@/components/ImageMod.astro";
-import Accordion from "@/functional-components/Accordion";
-import Testimonials from "@/functional-components/Testimonials";
+import AboutStats from "@/components/about/AboutStats.astro";
+import AboutFaq from "@/components/about/AboutFaq.astro";
 import Base from "@/layouts/Base.astro";
-import { markdownify } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import { markdownify } from "@/lib/utils/textConverter";
 import type { CollectionEntry } from "astro:content";
 import { getEntry } from "astro:content";
-import { FaBoxOpen, FaHeadset, FaRegCheckCircle } from "react-icons/fa";
 
 const about = (await getEntry("about", "-index")) as CollectionEntry<"about">;
 
@@ -21,183 +20,127 @@ const {
   button,
   faq_section_subtitle,
   faqs,
-  testimonials_section_enable,
-  testimonials_section_title,
-  testimonials,
-  staff_section_enable,
-  staff,
 } = about.data;
 ---
 
-<Base
-  title={title}
-  meta_title={meta_title}
-  description={description}
-  image={image}
->
+<Base title={title} meta_title={meta_title} description={description} image={image}>
   <PageHeader title={title} />
 
-  <section>
-    <div class="container">
-      {
-        about_us?.map((section, index) => (
-          <div class={`lg:flex gap-8 mt-14 lg:mt-28`}>
-            {index % 2 === 0 ? (
-              <>
-                <ImageMod
-                  class="rounded-md mx-auto"
-                  src={section?.image!}
-                  width={536}
-                  height={449}
-                  alt={section?.title}
-                />
-                <div class="mt-10 lg:mt-0">
-                  <h2>{section?.title}</h2>
-                  <p
-                    class="mt-4 text-text-light dark:text-darkmode-text-light leading-7"
-                    set:html={markdownify(section?.content)}
-                  />
-                </div>
-              </>
-            ) : (
-              <>
-                <div>
-                  <h2>{section.title}</h2>
-                  <p
-                    class="mt-4 text-text-light dark:text-darkmode-text-light leading-7"
-                    set:html={markdownify(section.content)}
-                  />
-                </div>
-                <ImageMod
-                  class="rounded-md mx-auto mt-10 lg:mt-0"
-                  src={section.image}
-                  width={536}
-                  height={449}
-                  alt={section.title}
-                />
-              </>
-            )}
-          </div>
-        ))
-      }
-    </div>
-  </section>
-
-  {
-    testimonials_section_enable && (
-      <Testimonials
-        client:load
-        title={testimonials_section_title!}
-        testimonials={testimonials!}
-      />
-    )
-  }
-
-  <section>
-    <div class="container">
-      <div class="text-center">
-        <h2>Our Staff</h2>
-
-        <div
-          class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-14"
-        >
-          {
-            staff_section_enable &&
-              staff!.map(
-                (s: { name: string; designation: string; avatar: string }) => (
-                  <div class="border border-border rounded-lg">
-                    <div class="py-6 space-y-2">
-                      <h3 class="h4">{s.name}</h3>
-                      <p class="text-text-dark dark:text-darkmode-text-light">
-                        {s.designation}
-                      </p>
-                    </div>
-                    <div class="bg-light rounded-b-xl mx-auto">
-                      <ImageMod
-                        src={s.avatar}
-                        alt={`Staff-${s.name}`}
-                        width={290}
-                        height={250}
-                        class="mx-auto w-full h-[250px] rounded-b-xl overflow-hidden"
-                      />
-                    </div>
-                  </div>
-                )
-              )
-          }
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div
-        class="bg-light px-7 py-20 dark:bg-darkmode-light text-center rounded-md"
-      >
-        <h2>Reasons to shop with us</h2>
-
-        <div class="row justify-center gap-6 mt-14">
-          <div class="col-6 md:col-5 lg:col-3">
-            <div class="flex justify-center">
-              <FaHeadset size={48} />
+  <!-- About Us sections -->
+  <section id="about-content">
+    <div class="cs-container">
+      {about_us?.map((section, index) => (
+        <div class={`cs-row ${index !== 0 ? "cs-row--divider" : ""} ${index % 2 !== 0 ? "cs-row--reverse" : ""}`}>
+          <div class="cs-image-col">
+            <div class="cs-picture-frame">
+              <ImageMod
+                class="cs-img"
+                src={section?.image!}
+                width={640}
+                height={480}
+                alt={section?.title}
+              />
             </div>
-            <h3 class="md:h4 mt-6 mb-4">24/7 Friendly Support</h3>
-            <p>Our support team always ready for you to 7 days a week</p>
           </div>
-
-          <div class="col-6 md:col-5 lg:col-3">
-            <div class="flex justify-center">
-              <FaBoxOpen size={48} />
-            </div>
-            <h3 class="md:h4 mt-6 mb-4">7 Days Easy Return</h3>
-            <p>Product any fault within 7 days for an immediately exchange.</p>
-          </div>
-
-          <div class="col-6 md:col-5 lg:col-3">
-            <div class="flex justify-center">
-              <FaRegCheckCircle size={48} />
-            </div>
-            <h3 class="md:h4 mt-6 mb-4">Quality Guaranteed</h3>
-            <p>
-              If your product are not perfect, return them for a full refund
-            </p>
+          <div class="cs-text-col">
+            <span class="cs-topper">{index === 0 ? "Since 2006" : "What We Carry"}</span>
+            <h2 class="cs-title">{section?.title}</h2>
+            <div class="cs-body" set:html={markdownify(section?.content)} />
           </div>
         </div>
-      </div>
+      ))}
     </div>
   </section>
 
-  <section>
-    <div class="container">
-      <div
-        class="bg-light px-7 lg:px-32 py-20 dark:bg-darkmode-light mb-14 xl:mb-28 rounded-md"
-      >
-        <div class="row">
-          <div class="md:col-5 mx-auto space-y-5 mb-10 md:mb-0">
-            <h1 set:html={markdownify(faq_section_title!)} />
-            <p
-              set:html={markdownify(faq_section_subtitle!)}
-              class="md:text-lg"
-            />
+  <AboutStats />
 
-            {
-              button?.enable && (
-                <a
-                  class="btn btn-sm md:btn-lg btn-primary font-medium"
-                  href={button.link}
-                >
-                  {button.label}
-                </a>
-              )
-            }
-          </div>
-
-          <div class="md:col-7">
-            <Accordion client:load faqs={faqs} />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <AboutFaq
+    title={faq_section_title!}
+    subtitle={faq_section_subtitle!}
+    faqs={faqs!}
+    buttonEnable={button?.enable}
+    buttonLabel={button?.label}
+    buttonLink={button?.link}
+  />
 </Base>
+
+<style>
+/*-- -------------------------- -->
+<---        About Content       -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+    #about-content {
+        padding: var(--sectionPadding);
+    }
+    #about-content .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(3.5rem, 7vw, 5rem);
+    }
+    #about-content .cs-row {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(2.5rem, 5vw, 4rem);
+    }
+    #about-content .cs-row--divider {
+        padding-top: clamp(3.5rem, 7vw, 5rem);
+        border-top: 1px solid #e8e8e8;
+    }
+    #about-content .cs-image-col {
+        width: 100%;
+    }
+    #about-content .cs-picture-frame {
+        width: 100%;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        position: relative;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+    #about-content .cs-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #about-content .cs-text-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #about-content .cs-topper {
+        color: var(--secondary);
+    }
+    #about-content .cs-title {
+        margin: 0 0 1.25rem;
+    }
+    #about-content .cs-body {
+        font-size: clamp(1rem, 1.5vw, 1.125rem);
+        line-height: 1.7em;
+        color: var(--bodyTextColor);
+    }
+}
+@media only screen and (min-width: 64rem) {
+    #about-content .cs-row {
+        flex-direction: row;
+        align-items: center;
+    }
+    #about-content .cs-row--reverse {
+        flex-direction: row-reverse;
+    }
+    #about-content .cs-image-col {
+        width: 48%;
+        flex: none;
+    }
+    #about-content .cs-text-col {
+        flex: 1;
+    }
+}
+</style>

@@ -1,0 +1,104 @@
+<!-- ============================================ -->
+<!--                About Stats                   -->
+<!-- ============================================ -->
+
+<section id="about-stats">
+    <div class="cs-container">
+        <ul class="cs-stat-group">
+            <li class="cs-stat">
+                <span class="cs-number">20+</span>
+                <span class="cs-label">Years in Business</span>
+            </li>
+            <li class="cs-divider" aria-hidden="true"></li>
+            <li class="cs-stat">
+                <span class="cs-number">100+</span>
+                <span class="cs-label">Products Available</span>
+            </li>
+            <li class="cs-divider" aria-hidden="true"></li>
+            <li class="cs-stat">
+                <span class="cs-number">YEG</span>
+                <span class="cs-label">Edmonton Local</span>
+            </li>
+            <li class="cs-divider" aria-hidden="true"></li>
+            <li class="cs-stat">
+                <span class="cs-number">B2B</span>
+                <span class="cs-label">Wholesale Pricing</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<style>
+/*-- -------------------------- -->
+<---         About Stats        -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+    #about-stats {
+        padding: clamp(3rem, 6vw, 4rem) 1rem;
+        background-color: #f7f8fa;
+        border-top: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    #about-stats .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+    }
+    #about-stats .cs-stat-group {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(1.5rem, 4vw, 3rem);
+    }
+    #about-stats .cs-stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.375rem;
+    }
+    #about-stats .cs-number {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 900;
+        line-height: 1em;
+        color: var(--primary);
+    }
+    #about-stats .cs-label {
+        font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--bodyTextColor);
+        text-align: center;
+    }
+    #about-stats .cs-divider {
+        width: 1px;
+        height: 3rem;
+        background-color: #e8e8e8;
+        display: none;
+    }
+}
+@media only screen and (min-width: 48rem) {
+    #about-stats .cs-divider {
+        display: block;
+    }
+}
+</style>
+
+<style is:global>
+/* Dark Mode — About Stats */
+.dark #about-stats {
+    background-color: #222222;
+    border-color: #3E3E3E;
+}
+.dark #about-stats .cs-label {
+    color: #aaa;
+}
+.dark #about-stats .cs-divider {
+    background-color: #3E3E3E;
+}
+</style>

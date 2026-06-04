@@ -1,85 +1,63 @@
 ---
 title: "About Us"
-meta_title: "About"
-description: ""
+meta_title: "About Containers By Yeg | Edmonton Restaurant Disposables"
+description: "Learn about Containers By Yeg (World Class Imports), Edmonton's trusted supplier of restaurant disposables since 2006."
 image: ""
 draft: false
 
 #About Us
 about_us:
-  - title: "Our Company"
+  - title: "Our Story"
     image: "/images/aboutUs.png"
-    content: "Welcome to **Astrofront** where brilliance meets innovation. We take pride in being your ultimate destination for exquisite lighting solutions that illuminate spaces and lives alike. With a passion for creating luminous experiences, we curate a diverse range of cutting-edge light fixtures designed to elevate any environment. Our commitment to quality craftsmanship and a keen eye for aesthetic appeal ensures that each product we offer is not just a source of light,<br/><br/> but a work of art in its own right. Whether you're seeking ambient elegance for your home or functional brilliance for a commercial space, [Your Company Name] is dedicated to bringing your vision to light. Explore our collection and let your surroundings shine with a touch of our radiant expertise. Elevate your space, embrace the light, only with **Astrofront**."
+    content: "Containers By Yeg — operating as **World Class Imports** — has been supplying Edmonton's foodservice industry since **2006**. What started as a mission to bring high-quality disposable packaging to local restaurants at competitive prices has grown into a trusted partnership with hundreds of foodservice businesses across Edmonton and beyond.<br/><br/>We work directly with manufacturers to eliminate the middleman and deliver consistent quality at wholesale pricing. Two decades of relationships in the import industry means we can source the right products quickly and reliably — so your kitchen never runs short."
 
-  - title: "Who We Are ?"
+  - title: "What We Offer"
     image: "/images/aboutUs.png"
-    content: "At **Astrofront** we illuminate your world with a curated collection of exceptional lighting solutions. Established with a passion for transforming spaces and creating ambiance, we stand as a beacon of quality and style in the realm of lighting. With a keen eye for design and a commitment to sourcing the finest materials, we pride ourselves on offering a diverse range of work that not only brighten spaces but also elevate aesthetics. <br/><br/> Committed to delivering excellence, we prioritize customer satisfaction and provide expert guidance to help you find the perfect lighting solution for any setting. Welcome to **Astrofront** where light meets inspiration. Illuminate your world today!"
+    content: "We carry a wide range of restaurant-grade disposables — from **takeout containers, pizza boxes, and packing cartons** to **cups, lids, bags, napkins, and cleaning supplies**. Everything is available in case quantities built for commercial purchasing.<br/><br/>Whether you run a single food truck or a multi-location restaurant group, we have the volume and variety to meet your needs. Our team is here to help you find the right products, negotiate bulk pricing, and keep your supply chain simple."
 
 # Frequently Asked Questions
 faq_section_title: "Frequently Asked Questions"
-faq_section_subtitle: "Our expertly crafted FAQ guide provides valuable insights on selecting the perfect table lamp to complement your decor and meet your specific lighting needs."
+faq_section_subtitle: "Have questions about ordering, pricing, or our products? We've answered the most common ones below. Don't see yours? Get in touch and we'll help you out."
 button:
   enable: true
   label: "Contact Us"
   link: "/contact"
 faqs:
-  - title: "Can I customize lamps for client projects?"
-    content: "Yes, our platform allows customization for client projects, ensuring unique and tailored solutions. Yes, our platform allows customization for client projects, ensuring unique and tailored solutions."
+  - title: "Do you offer bulk or wholesale pricing?"
+    content: "Yes. We specialize in case-quantity orders and offer competitive wholesale pricing for restaurants, caterers, food trucks, and other foodservice businesses. Pricing scales with order volume — contact us to discuss your needs."
 
-  - title: "Where are your lamps crafted?"
-    content: "Our lamps are meticulously crafted, combining quality materials and skilled workmanship to deliver exceptional products. Our lamps are meticulously crafted, combining quality materials and skilled workmanship to deliver exceptional products."
+  - title: "What products do you carry?"
+    content: "Our catalogue includes takeout containers, pizza boxes, packing cartons, cups and lids, bags, napkins, paper towels, dish soap, and more. If you're looking for something specific, reach out and we'll let you know if we can source it."
 
-  - title: "What's included in the 'free updates' policy?"
-    content: "Free updates encompass enhancements to lamp designs and features, ensuring your collection stays current and appealing. Free updates encompass enhancements to lamp designs and features, ensuring your collection stays current and appealing"
+  - title: "Can I pick up my order in Edmonton?"
+    content: "Yes. We are Edmonton-based and offer local pickup. We can also arrange delivery for larger orders. Contact us to confirm availability and arrange pickup or delivery timing."
 
-  - title: "Can I use your lamps for open source projects?"
-    content: "Certainly! Our lamps are open for integration into various projects, fostering creativity and innovation. Certainly! Our lamps are open for integration into various projects, fostering creativity and innovation."
+  - title: "What is the minimum order quantity?"
+    content: "We sell by the case. Minimum quantities vary by product. Browse our catalogue for case sizes, or contact us if you need guidance on what quantity makes sense for your operation."
 
-  - title: "Can I retail themes featuring your lamps?"
-    content: "Absolutely! You can sell themes created with our lamps, providing stylish solutions for diverse design needs. Absolutely! You can sell themes created with our lamps, providing stylish solutions for diverse design needs."
+  - title: "How quickly can I get my order?"
+    content: "For in-stock items, orders are typically ready for pickup within 1–2 business days. We'll confirm timelines when you place your order."
 
 # Testimonials
-testimonials_section_enable: true
-testimonials_section_title: "What Our Client Says"
+testimonials_section_enable: false
+testimonials_section_title: "What Our Customers Say"
 testimonials:
-  - name: "Ava Sinclair"
-    designation: "Lead Frontend Architect"
+  - name: "Marco R."
+    designation: "Owner, Bella Cucina Restaurant"
     avatar: "/images/avatar-sm.png"
-    content: "Astrofront has been a game-changer for our e-commerce setup. This Astro-Shopify boilerplate blends the speed and flexibility of Astro with the powerful e-commerce capabilities of Shopify, giving us the perfect foundation for a high-performance, modern storefront. Setup was smooth, and it’s optimized for seamless integration with Shopify’s API, so we were able to get our site up and running quickly without compromising on customizations or functionality. Astrofront’s clean codebase and scalability make it an ideal solution for any team looking to leverage Astro’s benefits in an e-commerce context. Highly recommended for anyone looking to streamline their Shopify store with the speed of Astro!"
+    content: "We've been sourcing all of our takeout packaging from Containers By Yeg for over three years. The quality is consistent and the pricing beats everything else we've tried in the city."
 
-  - name: "Jordan Patel"
-    designation: "E-commerce Solutions Strategist"
+  - name: "Sarah K."
+    designation: "Manager, Prairie Catering Co."
     avatar: "/images/avatar-sm.png"
-    content: "Astrofront has been a game-changer for our e-commerce setup. This Astro-Shopify boilerplate blends the speed and flexibility of Astro with the powerful e-commerce capabilities of Shopify, giving us the perfect foundation for a high-performance, modern storefront. Setup was smooth, and it’s optimized for seamless integration with Shopify’s API, so we were able to get our site up and running quickly without compromising on customizations or functionality. Astrofront’s clean codebase and scalability make it an ideal solution for any team looking to leverage Astro’s benefits in an e-commerce context. Highly recommended for anyone looking to streamline their Shopify store with the speed of Astro!"
+    content: "Fast service and a huge selection. I can get everything from soup containers to shopping bags in one order. Makes running our catering company so much easier."
 
-  - name: "Lena Brooks"
-    designation: "Digital Experience Specialist"
+  - name: "David T."
+    designation: "Operator, Yeg Street Eats"
     avatar: "/images/avatar-sm.png"
-    content: "Astrofront has been a game-changer for our e-commerce setup. This Astro-Shopify boilerplate blends the speed and flexibility of Astro with the powerful e-commerce capabilities of Shopify, giving us the perfect foundation for a high-performance, modern storefront. Setup was smooth, and it’s optimized for seamless integration with Shopify’s API, so we were able to get our site up and running quickly without compromising on customizations or functionality. Astrofront’s clean codebase and scalability make it an ideal solution for any team looking to leverage Astro’s benefits in an e-commerce context. Highly recommended for anyone looking to streamline their Shopify store with the speed of Astro!"
-
-  - name: "Marvin McKinney"
-    designation: "Web Designer"
-    avatar: "/images/avatar-sm.png"
-    content: "Astrofront has been a game-changer for our e-commerce setup. This Astro-Shopify boilerplate blends the speed and flexibility of Astro with the powerful e-commerce capabilities of Shopify, giving us the perfect foundation for a high-performance, modern storefront. Setup was smooth, and it’s optimized for seamless integration with Shopify’s API, so we were able to get our site up and running quickly without compromising on customizations or functionality. Astrofront’s clean codebase and scalability make it an ideal solution for any team looking to leverage Astro’s benefits in an e-commerce context. Highly recommended for anyone looking to streamline their Shopify store with the speed of Astro!"
+    content: "The bulk pricing is unbeatable for our food truck operation. We order monthly and it's always ready on time. Highly recommend to any food business in Edmonton."
 
 # Our Staff
-staff_section_enable: true
-staff:
-  - name: "Marvin McKinney"
-    designation: "Web Designer"
-    avatar: "/images/staff/staff.png"
-
-  - name: "Noah Anderson"
-    designation: "Java Engineer"
-    avatar: "/images/staff/staff.png"
-
-  - name: "Olivia Harper"
-    designation: "UI Designer"
-    avatar: "/images/staff/staff.png"
-
-  - name: "Benjamin Clarke"
-    designation: "Product Marketer"
-    avatar: "/images/staff/staff.png"
+staff_section_enable: false
+staff: []
 ---
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
