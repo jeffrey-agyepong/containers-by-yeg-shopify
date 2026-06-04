@@ -1,5 +1,18 @@
 .header {
-  @apply bg-body py-6 dark:bg-darkmode-body;
+  @apply py-4;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.header-scrolled {
+  background-color: #fff;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 1024px) {
+  .header {
+    @apply bg-body py-6;
+  }
 }
 
 /* navbar items */
