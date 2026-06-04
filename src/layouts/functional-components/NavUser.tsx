@@ -81,11 +81,11 @@ const NavUser = ({ pathname }: { pathname: string }) => {
         </button>
       ) : (
         <a
-          className="text-xl text-text-dark hover:text-text-primary dark:border-darkmode-border dark:text-white flex items-center"
+          className="text-xl text-text-dark hover:text-primary flex items-center"
           href="/login"
           aria-label="login"
         >
-          <BsPerson className="dark:hover:text-darkmode-primary" />
+          <BsPerson />
         </a>
       )}
 
