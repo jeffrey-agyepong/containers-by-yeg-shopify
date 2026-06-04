@@ -137,7 +137,7 @@ const isParentActive = (children: any[]) => {
                       class:list={[
                         "nav-link block",
                         "py-2 px-3 rounded-lg transition-colors",
-                        isMenuItemActive(menuItem.url) &&
+                        isMenuItemActive(menuItem.url ?? "") &&
                           "text-primary font-medium",
                       ]}
                     >
@@ -280,8 +280,8 @@ const isParentActive = (children: any[]) => {
                       href={menuItem.url}
                       class:list={[
                         "nav-link block",
-                        "py-2 px-3rounded-lg transition-colors",
-                        isMenuItemActive(menuItem.url) &&
+                        "py-2 px-3 rounded-lg transition-colors",
+                        isMenuItemActive(menuItem.url ?? "") &&
                           "text-primary font-medium",
                       ]}
                     >
@@ -312,13 +312,18 @@ const isParentActive = (children: any[]) => {
     const menuCloseIcons = document.querySelectorAll(".menu-close");
     const submenuToggles = document.querySelectorAll("[data-submenu-toggle]");
 
+    const mobileIcons = document.querySelectorAll(".nav-mobile-icon");
     let showSidebar = false;
 
     function updateNavbarShadow() {
-      if (window.scrollY > 0) {
-        header?.classList.add("shadow-sm");
+      const isDesktop = window.innerWidth >= 1024;
+      if (isDesktop) return;
+      if (window.scrollY > 50) {
+        header?.classList.add("header-scrolled");
+        mobileIcons.forEach(el => el.classList.remove("nav-mobile-icon--transparent"));
       } else {
-        header?.classList.remove("shadow-sm");
+        header?.classList.remove("header-scrolled");
+        mobileIcons.forEach(el => el.classList.add("nav-mobile-icon--transparent"));
       }
     }
 
@@ -348,8 +353,12 @@ const isParentActive = (children: any[]) => {
       arrow.classList.toggle("active");
     }
 
+    // Run once on load to set initial state
+    updateNavbarShadow();
+
     // Event Listeners
     window.addEventListener("scroll", updateNavbarShadow);
+    window.addEventListener("resize", updateNavbarShadow);
     navToggle?.addEventListener("click", toggleSidebar);
     navToggleMobile?.addEventListener("click", toggleSidebar);
     overlay?.addEventListener("click", toggleSidebar);

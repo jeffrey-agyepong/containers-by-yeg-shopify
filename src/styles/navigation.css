@@ -108,6 +108,15 @@
   }
 }
 
+/* mobile nav icons — white when header is transparent over hero */
+.nav-mobile-icon {
+  @apply text-white border-white/40;
+}
+
+.header-scrolled .nav-mobile-icon {
+  @apply text-text-dark border-border;
+}
+
 /* footer items */
 .footer-link {
   @apply text-sm md:text-base font-medium transition text-text-light hover:text-text-dark dark:text-darkmode-text dark:hover:text-darkmode-primary;
