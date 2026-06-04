@@ -314,7 +314,6 @@ const isParentActive = (children: any[]) => {
     const menuCloseIcons = document.querySelectorAll(".menu-close");
     const submenuToggles = document.querySelectorAll("[data-submenu-toggle]");
 
-    const mobileIcons = document.querySelectorAll(".nav-mobile-icon");
     let showSidebar = false;
 
     function updateNavbarShadow() {
@@ -322,10 +321,8 @@ const isParentActive = (children: any[]) => {
       if (isDesktop) return;
       if (window.scrollY > 50) {
         header?.classList.add("header-scrolled");
-        mobileIcons.forEach(el => el.classList.remove("nav-mobile-icon--transparent"));
       } else {
         header?.classList.remove("header-scrolled");
-        mobileIcons.forEach(el => el.classList.add("nav-mobile-icon--transparent"));
       }
     }
 

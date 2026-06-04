@@ -114,28 +114,14 @@
   background-color: #fff !important;
 }
 
-/* mobile nav icons + cart — white when header is transparent over hero */
+/* mobile hamburger icon */
 .nav-mobile-icon {
-  @apply text-white border-white/40;
-}
-
-.header-scrolled .nav-mobile-icon {
   @apply text-text-dark border-border;
 }
 
-/* cart icon inherits color from this wrapper */
+/* cart icon */
 .nav-cart-wrapper {
-  color: #fff;
-}
-
-.header-scrolled .nav-cart-wrapper {
   color: #000;
-}
-
-@media (min-width: 1024px) {
-  .nav-cart-wrapper {
-    color: #000;
-  }
 }
 
 /* footer items */
